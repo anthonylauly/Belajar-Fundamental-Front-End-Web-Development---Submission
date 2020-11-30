@@ -1,0 +1,26 @@
+{
+  "name": "cabangku",
+  "version": "1.0.0",
+  "description": "dicoding submission purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonylauly"
+  },
+  "author": "anthonylauly",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
+  }
+}
