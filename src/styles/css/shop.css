@@ -71,65 +71,14 @@ a, h2{
     display: flex;
     flex-direction: column;
     padding-left: 0;
-}
-.flex-row{
-    display: flex;
-    flex-direction: row;
-}
-.card{
-    flex-grow: 1;
-    overflow: auto;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px #ebebeb;
-    border: 1px solid #f1f6f9;
-    margin: 5px;
-    padding: 3px;
-}
-.card li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.card p{
-    padding-top: 0;
-    margin-top: 0;
-    text-align: justify;
-}
-.filter-title{
-    background-color: #ebebeb;
-    padding-left: 10px;
-    padding-top: 10px;
-    text-decoration: solid;
-}
-.filter-lokasi{
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid #f1f6f9;
-}
-.filter-harga{
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid #f1f6f9;
-}
-.filter-industri{
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    border: 1px solid #f1f6f9
-}
+} 
+
 main aside {
     float: left;
     border: 1px solid black;
     margin-left: 20px;
     box-shadow: 1px 1px 1px 1px #ebebeb;
     border: 1px solid #f1f6f9;
-}
-aside img{
-    width:150px;
 }
 .box {
     /* properti lainnya */

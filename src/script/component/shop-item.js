@@ -5,29 +5,38 @@ class ShopItem extends HTMLElement {
 
     set shop(shop){
         this._shop = shop;
-        this.render();
+        this.render_init();
     }
 
     get shop() {
         return this._shop;
     }
 
-    render(){
+    render_init(){
         this.innerHTML = `
             <style>
-                * {
-                    box-sizing: border-box;
-                    padding: 0;
-                    margin: 0;
+                img{
+                    width: 200px;
+                    float: left;
+                }
+                h3{
+                    margin-top: 1px;
+                    padding-top: 1px;
+                }
+                h2{
+                    margin-bottom: 1px;
+                    padding-bottom: 1px;
                 }
             </style>
         `;
-        
+    }
+
+    render(){
         this.innerHTML += `
             <img src="${this.shop.logo}" alt="${this.shop.name}">
             <div float='right'>
-                <h3>${this.shop.name}</h3>
-                <h4>Locations : ${this.shop.headquarter}</h4>
+                <h2>${this.shop.name}</h2>
+                <h3>${this.shop.headquarter}</h3>
             </div>
         `;
     }

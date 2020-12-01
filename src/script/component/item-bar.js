@@ -7,7 +7,7 @@ class ItemBar extends HTMLElement {
     }
 
     connectedCallback(){
-        this.render();
+        this.render_init();
     }
 
     set shop(shop) {
@@ -19,27 +19,47 @@ class ItemBar extends HTMLElement {
         return this._shop;
     }
 
-    render(){
+    render_init(){
         this.shadowDOM.innerHTML = `
             <style>
                 :host {
                     box-sizing: border-box;
-                    padding: 0;
-                    margin: 0;
-                    float: right;
+                    padding: 5px;
+                    margin: 10px;
+                    max-width: 900px;
                     display: flex;
                     flex-direction: column;
-                    padding-left: 0;
+                    border-radius: 10px;
+                    border: 1px solid #f1f6f9;
+                    background-color: #ebebeb;
+                    overflow: auto;
+                }
+                .flex-row{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 5px;
+                }
+                shop-item{
+                    margin: 10px;
                 }
             </style>
-        `;       
+        `; 
+    }
 
+    render(){      
+        let i = 0;
         this.shop.forEach(shop => {
+            if (i%4 == 0){
+                this.shadowDOM.innerHTML += `
+                    <div class='flex-row'></div>
+                `;
+            }
+            let j = Math.floor(i/4);
             const shopItemElement = document.createElement("shop-item");
             shopItemElement.shop = shop;
-            this.shadowDOM.appendChild(shopItemElement);
-        });
-        
+            this.shadowDOM.querySelectorAll('.flex-row')[j].appendChild(shopItemElement);
+            i+=1;
+        });        
     }
 }
 

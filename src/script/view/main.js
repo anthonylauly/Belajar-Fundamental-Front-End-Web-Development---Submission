@@ -1,5 +1,6 @@
 import "../component/item-bar";
-import DataSource from "../data/data-source"
+import "../component/filter-box";
+import DataSource from "../data/data-source";
 
 const main = () => {
     const itemBarElement = document.querySelector("item-bar");

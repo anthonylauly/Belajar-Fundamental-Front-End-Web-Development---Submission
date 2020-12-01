@@ -1,0 +1,25 @@
+.filter-title{
+    background-color: #ebebeb;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-decoration: solid;
+}
+.filter-lokasi{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #f1f6f9;
+}
+.filter-harga{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #f1f6f9;
+}
+.filter-industri{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border: 1px solid #f1f6f9
+}
