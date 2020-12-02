@@ -1,8 +1,12 @@
+import "../data/data-source"
+import location_filters from "../data/local-data"
+
+var locations = new location_filters();
+
 class FilterBox extends HTMLElement {
     constructor(){
         super();
         this.shadowDOM = this.attachShadow({mode:'open'});
-        this.location = [];
     }
 
     connectedCallback(){
@@ -38,31 +42,21 @@ class FilterBox extends HTMLElement {
                 </div>
             </div>
         `;
-        location_array = this.location;
-        const surabaya = this.shadowDOM.querySelector('.surabaya');
-        surabaya.addEventListener('change', function(){
-            if (this.checked) {
-                location_array.push('Surabaya');              
-            } 
-        });
 
         const lampung = this.shadowDOM.querySelector('.lampung');
         lampung.addEventListener('change', function(){
             if (this.checked) {
-                location_array.push('Lampung');
+                locations.location = 'Lampung';   
               } 
         });
-        console.log(location_array);
-        this.location = location_array;
     }
-
 
     attributeChangedCallback(name, oldval, newval){
         console.log('attributes changed');
     }
 
     static get observedAttributes(){
-        return ['surabaya_check']
+        return ['_location_array']
     }
 }
 
