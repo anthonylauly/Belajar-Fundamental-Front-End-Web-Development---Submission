@@ -214,10 +214,9 @@ const main = () => {
         itemBarElement.innerHTML += `<h3>${message}</h3>`;
     }
 
-   
     DataSource.listAllShops()
     .then(renderResult)
     .catch(fallbackResult)
 }
 
-export default main
+export default main;

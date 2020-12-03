@@ -4,6 +4,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;800&display=swap" rel="stylesheet">
         <title>Shop List</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            item-bar{
+                float:left;
+            }
+            filter-box{
+                float:right;
+                }
+        </style>
     </head>
 
     <body>
@@ -15,7 +23,7 @@
                 <li class='mid-menu mid-last'><h1><a href="#">Contact Us</a></h1></li>
                 <li class='right-menu'><h2><a href="#">English</a> | <a href="#">Bahasa</a></h2></li>
                 <div class='dropdown'>
-                    <li class='right-menu right-last'><button onClick='myFunction()' class='dropbtn'><img src="static/images/profile.png"></button></li>
+                    <li class='right-menu right-last'><button class='dropbtn'><img src="static/images/profile.png"></button></li>
                     <div id='myDropdown' class='dropdown-content'>
                         <a href="#">Register</a>
                         <a href="#">Sign In</a>
@@ -23,7 +31,7 @@
                 </div>
                 <li class='lang-resp'><h2><a href="#">EN</a> | <a href="#">ID</a></h2></li>
                 <div class='dropdown'>
-                    <li class='right-menu-resp'><button onClick='respDrop()' class='dropbtn'><img src="static/images/hamburger-button.png" width="75px"></button></li>
+                    <li class='right-menu-resp'><button class='dropbtn'><img src="static/images/hamburger-button.png" width="75px"></button></li>
                     <div id='respDropdown' class='dropdown-content'>
                         <h1><a href="#">Product</a></h1>
                         <h1><a href="#">About</a></h1>
@@ -37,7 +45,6 @@
 
         <main>
             <div class="content">
-
                 <item-bar></item-bar>
                 <filter-box></filter-box>
             </div>
