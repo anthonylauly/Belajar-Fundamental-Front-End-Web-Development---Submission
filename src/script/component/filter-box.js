@@ -23,14 +23,11 @@ class FilterBox extends HTMLElement {
                     Lokasi <br>
                     <input type="checkbox" class='surabaya' value='Surabaya'> Surabaya <br>
                     <input type="checkbox" class='lampung' value='Lampung'> Lampung <br>
-                    <input type="checkbox"> Jakarta <br>
-                    <input type="checkbox"> Bandung <br>
+                    <input type="checkbox" class='jakarta' value='Jakarta'> Jakarta <br>
+                    <input type="checkbox" class='bandung' value='Bandung'> Bandung <br>
+                    <input type="checkbox" class='palembang' value='Palembang'> Palembang <br>
+                    
                     <a href="#">Lihat Selengkapnya</a>
-                </div>
-                <div class='filter-harga'>
-                    Harga <br>
-                    <input type="text"> <br>
-                    <input type="text"> <br>
                 </div>
                 <div class='filter-industri'>
                     Industri <br>
