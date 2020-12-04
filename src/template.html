@@ -15,33 +15,46 @@
     </head>
 
     <body>
-        <header>
-            <ul>
-                <li class='logo'><img src="static/images/logo-12.png" alt="logo"></li>
-                <li class='mid-menu'><h1><a href="#">Product</a></h1></li>
-                <li class='mid-menu'><h1><a href="#">About</a></h1></li>
-                <li class='mid-menu mid-last'><h1><a href="#">Contact Us</a></h1></li>
-                <li class='right-menu'><h2><a href="#">English</a> | <a href="#">Bahasa</a></h2></li>
-                <div class='dropdown'>
-                    <li class='right-menu right-last'><button class='dropbtn'><img src="static/images/profile.png"></button></li>
-                    <div id='myDropdown' class='dropdown-content'>
-                        <a href="#">Register</a>
-                        <a href="#">Sign In</a>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="../static/images/logo-12.png" width="125" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="nav-item">
+                    <a href="#">English</a> | <a href="#">Bahasa
+                </ul>
+                <ul class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg width="10em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                          </svg>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <form class="dropdown-item">
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                              <input type="password" class="form-control" id="password" placeholder="password">
+                            </div>
+                        </form>
+
                     </div>
-                </div>
-                <li class='lang-resp'><h2><a href="#">EN</a> | <a href="#">ID</a></h2></li>
-                <div class='dropdown'>
-                    <li class='right-menu-resp'><button class='dropbtn'><img src="static/images/hamburger-button.png" width="75px"></button></li>
-                    <div id='respDropdown' class='dropdown-content'>
-                        <h1><a href="#">Product</a></h1>
-                        <h1><a href="#">About</a></h1>
-                        <h1><a href="#">Contact Us</a></h1>
-                        <h1><a href="#">Register</a></h1>
-                        <h1><a href="#">Sign In</a></h1>
-                    </div>
-                </div>
-            </ul>
-        </header>
+                </ul>             
+            </div>
+        </nav>
 
         <main>
             <div class="content">

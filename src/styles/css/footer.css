@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+footer {
+    padding: 20px;
+    color: white;
+    background: #b2ebf2;
+ }
