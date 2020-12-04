@@ -3,7 +3,9 @@ main{
     align-items: center;
     padding-left: 180px;
     padding-right: 180px;
+    overflow: auto;
 }
 .content{
     max-width: 1150px;
+    width: 100%;
 }

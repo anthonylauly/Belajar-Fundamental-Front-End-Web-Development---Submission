@@ -214,9 +214,42 @@ const main = () => {
         itemBarElement.innerHTML += `<h3>${message}</h3>`;
     }
 
+    const signInSuccessful = () => {
+        const main_navbar = document.getElementById('main-navbar');
+        main_navbar.innerHTML += `
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="myshop">My Shop</a>
+            </li>
+        `;
+
+        const myshopElement = document.getElementById('myshop');
+        myshopElement.addEventListener('click', function myShopList(){
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+    
+            DataSource.retreiveMyShops(email.value, password.value)
+            .then(renderResult)
+            .catch(fallbackResult)
+        });
+    }
+
     DataSource.listAllShops()
     .then(renderResult)
     .catch(fallbackResult)
+
+    const password = document.getElementById('password');
+    password.addEventListener('change', function(){
+        const email = document.getElementById('email');
+        const email_value = email.value;
+        const password_value = this.value;
+
+        DataSource.signIn(email_value, password_value)
+        .then(signInSuccessful)
+        .catch(function(){
+            alert("Sign In Unsuccessful");
+
+        })
+    });
 }
 
 export default main;

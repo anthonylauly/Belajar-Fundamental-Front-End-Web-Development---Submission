@@ -1,7 +1,4 @@
 import "../data/data-source"
-import location_filters from "../data/local-data"
-
-var locations = new location_filters();
 
 class FilterBox extends HTMLElement {
     constructor(){
