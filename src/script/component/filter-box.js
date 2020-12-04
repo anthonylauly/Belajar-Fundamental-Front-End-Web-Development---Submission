@@ -18,7 +18,8 @@ class FilterBox extends HTMLElement {
                     border-radius: 10px;
                     border: 1px solid #f1f3f9;
                     box-shadow: 1px 1px 1px 1px #ebebeb;
-                    border: 1px solid #f1f6f9;                    width: 200px;
+                    border: 1px solid #f1f6f9;                    
+                    width: 200px;
                 }
                 .filter-title{
                     background-color: #ebebeb;

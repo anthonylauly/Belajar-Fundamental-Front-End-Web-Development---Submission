@@ -9,3 +9,44 @@ main{
     max-width: 1150px;
     width: 100%;
 }
+
+@media screen and (min-width: 1366px) {
+    main{
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 999px){
+    main{
+        padding-left: 10px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px){
+    main{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 768px){
+    main{
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 374px){
+    main{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 540px){
+    main{
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+}

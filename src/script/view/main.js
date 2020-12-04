@@ -223,7 +223,7 @@ const main = () => {
         `;
 
         const myshopElement = document.getElementById('myshop');
-        myshopElement.addEventListener('click', function myShopList(){
+        myshopElement.addEventListener('click', function(){
             const email = document.getElementById('email');
             const password = document.getElementById('password');
     
@@ -250,6 +250,20 @@ const main = () => {
 
         })
     });
+
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', function(){
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    })
+
+    const product = document.getElementById('product');
+    product.addEventListener('click', function(){
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    })
 }
 
 export default main;
