@@ -4,6 +4,7 @@ import DataSource from "../data/data-source";
 
 const main = () => {
     let locations = [];
+    let industries = [];
     const itemBarElement = document.querySelector("item-bar");
     const filterBox = document.querySelector('filter-box');
 
