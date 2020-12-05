@@ -11,204 +11,178 @@ const main = () => {
     const surabaya_check = filterBox.shadowDOM.querySelector('.surabaya');
     surabaya_check.addEventListener('change', function(){
         if (this.checked) {
-            locations.push('Surabaya');  
-            DataSource.listAllShops()
-            .then(renderResultLocationFilter)
-            .catch(fallbackResult)
+            locations.push('Surabaya'.toLowerCase());  
         }
         else {
             let idx = -1
             idx = locations.findIndex(loc => {
-                return loc == 'Surabaya';
+                return loc.toLowerCase() == 'Surabaya'.toLowerCase();
             })
-            if (locations.length == 0 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if (locations.length == 1 && idx != -1){
-                locations = [];
-                console.log(locations);
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx != -1){
+            if (idx != -1){
                 locations.splice(idx,1);
-
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
             }
-        } 
+        }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
     });
 
     const lampung_check = filterBox.shadowDOM.querySelector('.lampung');
     lampung_check.addEventListener('change', function(){
         if (this.checked) {
-            locations.push('Lampung');  
-            DataSource.listAllShops()
-            .then(renderResultLocationFilter)
-            .catch(fallbackResult)
+            locations.push('Lampung'.toLowerCase()); 
         }
         else {
             let idx = -1
             idx = locations.findIndex(loc => {
-                return loc == 'Lampung';
+                return loc.toLowerCase() == 'Lampung'.toLowerCase();
             })
-            if (locations.length == 0 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if (locations.length == 1 && idx != -1){
-                locations = [];
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx != -1){
+            if (idx != -1){
                 locations.splice(idx,1);
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
             }
         }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
     });
 
     const jakarta_check = filterBox.shadowDOM.querySelector('.jakarta');
     jakarta_check.addEventListener('change', function(){
         if (this.checked) {
-            locations.push('Jakarta');  
-            DataSource.listAllShops()
-            .then(renderResultLocationFilter)
-            .catch(fallbackResult)
+            locations.push('Jakarta'.toLowerCase());  
         }
         else {
             let idx = -1
             idx = locations.findIndex(loc => {
-                return loc == 'Jakarta';
+                return loc.toLowerCase() == 'Jakarta'.toLowerCase();
             })
-            if (locations.length == 0 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if (locations.length == 1 && idx != -1){
-                locations = [];
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx != -1){
+            if (idx != -1){
                 locations.splice(idx,1);
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
             }
         }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
     });
 
     const bandung_check = filterBox.shadowDOM.querySelector('.bandung');
     bandung_check.addEventListener('change', function(){
         if (this.checked) {
-            locations.push('Bandung');  
-            DataSource.listAllShops()
-            .then(renderResultLocationFilter)
-            .catch(fallbackResult)
+            locations.push('Bandung'.toLowerCase());  
         }
         else {
             let idx = -1
             idx = locations.findIndex(loc => {
-                return loc == 'Bandung';
+                return loc.toLowerCase() == 'Bandung'.toLowerCase();
             })
-            if (locations.length == 0 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if (locations.length == 1 && idx != -1){
-                locations = [];
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx != -1){
+            if (idx != -1){
                 locations.splice(idx,1);
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
             }
         }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
     });
 
     const palembang_check = filterBox.shadowDOM.querySelector('.palembang');
     palembang_check.addEventListener('change', function(){
         if (this.checked) {
-            locations.push('Palembang');  
-            DataSource.listAllShops()
-            .then(renderResultLocationFilter)
-            .catch(fallbackResult)
+            locations.push('Palembang'.toLowerCase());  
         }
         else {
             let idx = -1
             idx = locations.findIndex(loc => {
-                return loc == 'Palembang';
+                return loc.toLowerCase() == 'Palembang'.toLowerCase();
             })
-            if (locations.length == 0 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if (locations.length == 1 && idx != -1){
-                locations = [];
-                DataSource.listAllShops()
-                .then(renderResult)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx == -1){
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
-            }
-            else if(locations.length > 1 && idx != -1){
+            if (idx != -1){
                 locations.splice(idx,1);
-                DataSource.listAllShops()
-                .then(renderResultLocationFilter)
-                .catch(fallbackResult)
             }
         }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
     });
 
-    const renderResult = JSONresults => {
-        itemBarElement.shop = JSONresults;
-        itemBarElement.locationFilter(false);
-    }
+    const computer_check = filterBox.shadowDOM.querySelector('.computer');
+    computer_check.addEventListener('change', function(){
+        if (this.checked) {
+            industries.push('Computer');  
+        }
+        else {
+            let idx = -1
+            idx = industries.findIndex(ind => {
+                return ind.toLowerCase() == 'Computer'.toLowerCase();
+            })
+            if (idx != -1){
+                industries.splice(idx,1);
+            }
+        }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    });
 
-    const renderResultLocationFilter = JSONresults => {
-        itemBarElement.shop = JSONresults;
+    const manufacturing_check = filterBox.shadowDOM.querySelector('.manufacturing');
+    manufacturing_check.addEventListener('change', function(){
+        if (this.checked) {
+            industries.push('Manufacturing'); 
+        }
+        else {
+            let idx = -1
+            idx = industries.findIndex(ind => {
+                return ind.toLowerCase() == 'Manufacturing'.toLowerCase();
+            })
+            if (idx != -1){
+                industries.splice(idx,1);
+            }
+        }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    });
+
+    const food_check = filterBox.shadowDOM.querySelector('.food');
+    food_check.addEventListener('change', function(){
+        if (this.checked) {
+            industries.push('Food'); 
+        }
+        else {
+            let idx = -1
+            idx = industries.findIndex(ind => {
+                return ind.toLowerCase() == 'Food'.toLowerCase();
+            })
+            if (idx != -1){
+                industries.splice(idx,1);
+            }
+        }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    });
+
+    const hospitality_check = filterBox.shadowDOM.querySelector('.hospitality');
+    hospitality_check.addEventListener('change', function(){
+        if (this.checked) {
+            industries.push('Hospitality');  
+        }
+        else {
+            let idx = -1
+            idx = industries.findIndex(ind => {
+                return ind.toLowerCase() == 'Hospitality'.toLowerCase();
+            })
+            if (idx != -1){
+                industries.splice(idx,1);
+            }
+        }
+        DataSource.listAllShops()
+        .then(renderResult)
+        .catch(fallbackResult)
+    });
+    
+    const renderResult = JSONresults => {
         itemBarElement.locations = locations;
-        itemBarElement.locationFilter(true);
+        itemBarElement.industries = industries;
+        itemBarElement.shop = JSONresults;
     }
 
     const fallbackResult = message => {

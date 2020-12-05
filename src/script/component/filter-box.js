@@ -58,10 +58,10 @@ class FilterBox extends HTMLElement {
                 </div>
                 <div class='filter-industri'>
                     <h4>Industri</h4>
-                    <input type="checkbox"> Agriculture <br>
-                    <input type="checkbox"> Food & Beverages <br>
-                    <input type="checkbox"> Hotel,Tourism, & Catering <br>
-                    <input type="checkbox"> Textile, Clothing, & Footwear <br>
+                    <input type="checkbox" class='computer'> Computer <br>
+                    <input type="checkbox" class='manufacturing'> Manufacturing <br>
+                    <input type="checkbox" class='food'> Food <br>
+                    <input type="checkbox" class='hospitality'> Hospitality <br>
                     <a href="#">Lihat Selengkapnya</a>
                 </div>
             </div>
