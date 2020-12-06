@@ -4,7 +4,7 @@
   "description": "dicoding submission purpose",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
     "start-dev": "webpack serve"
   },
   "repository": {
@@ -16,6 +16,7 @@
   "devDependencies": {
     "bootstrap": "^4.5.3",
     "css-loader": "^5.0.1",
+    "eslint": "^7.15.0",
     "html-webpack-plugin": "^4.5.0",
     "jquery": "^3.5.1",
     "style-loader": "^2.0.0",

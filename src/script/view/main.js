@@ -198,7 +198,7 @@ const main = () => {
         `;
 
         const myshopElement = document.getElementById('myshop');
-        myshopElement.addEventListener('click', function(){
+        myshopElement.addEventListener('click', () => {
             const email = document.getElementById('email');
             const password = document.getElementById('password');
     
@@ -220,21 +220,20 @@ const main = () => {
 
         DataSource.signIn(email_value, password_value)
         .then(signInSuccessful)
-        .catch(function(){
+        .catch( () => {
             alert("Sign In Unsuccessful");
-
         })
     });
 
     const logo = document.getElementById('logo');
-    logo.addEventListener('click', function(){
+    logo.addEventListener('click', () => {
         DataSource.listAllShops()
         .then(renderResult)
         .catch(fallbackResult)
     })
 
     const product = document.getElementById('product');
-    product.addEventListener('click', function(){
+    product.addEventListener('click', () => {
         DataSource.listAllShops()
         .then(renderResult)
         .catch(fallbackResult)

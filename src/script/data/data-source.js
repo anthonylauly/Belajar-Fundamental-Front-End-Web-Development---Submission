@@ -1,6 +1,5 @@
 class DataSource {
     constructor(){
-        const base = "https://cabangku.azurewebsites.net/api/shop/";
     }
 
     static listAllShops() {
@@ -15,12 +14,13 @@ class DataSource {
                 return Promise.reject("Result is not found");
             }
         })
-    };
+    }
 
     static retreiveMyShops(username, password){
+        const user_pass = btoa(`${username}:${password}`);
         return fetch("https://cabangku.azurewebsites.net/api/shop/myshop_list/", {
             headers: {
-                "Authorization": "Basic "  + btoa(username + ":" + password),
+                "Authorization": `Basic ${user_pass}`,
             }
         })
         .then(response => {
@@ -35,9 +35,10 @@ class DataSource {
         })
     }
     static signIn(username, password){
+        const user_pass = btoa(`${username}:${password}`);
         return fetch("https://cabangku.azurewebsites.net/api/shop/", {
             headers: {
-                "Authorization": "Basic "  + btoa(username + ":" + password),
+                "Authorization": `Basic ${user_pass}`,
             }
         })
         .then(response => {
